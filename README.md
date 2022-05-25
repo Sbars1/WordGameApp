@@ -1,5 +1,5 @@
 # WordGameApp
--Real Time- Firebase\n
+-Real Time- Firebase
 -Banner 
 -Google AdMob Rewarded Video
 
