@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/customBgColor"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/customBgCloseColor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/custom_dialog_settings_imageViewClose"
+            android:gravity="center"
+            android:text="Ayarlar"
+            android:textColor="@color/customTextColor"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/custom_dialog_settings_imageViewClose"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Müzik Aç - Kapa:"
+            android:textColor="@color/customTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/custom_dialog_settings_radioBtnMusicClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kapat"
+                android:textColor="@color/customTextColor"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/custom_dialog_settings_radioBtnMusicOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Aç"
+                android:textColor="@color/customTextColor"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/custom_dialog_settings_btnChangeName"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_round_bg_2"
+            android:text="İsmimi Değiştir"
+            android:textAllCaps="false"
+            android:textColor="@color/customBtnTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/custom_dialog_settings_btnChangeProfileImage"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/btn_round_bg_2"
+            android:text="Resmimi Değiştir"
+            android:textAllCaps="false"
+            android:textColor="@color/customBtnTextColor"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

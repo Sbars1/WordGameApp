@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    tools:context=".PlayActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:src="@drawable/heartdesign"
+        android:layout_height="50dp"
+        android:id="@+id/play_activity_imageViewHeartDesign"
+        android:layout_marginRight="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/play_activity_imageViewHeartDesign"
+        app:layout_constraintBottom_toBottomOf="@+id/play_activity_imageViewHeartDesign"
+        app:layout_constraintRight_toRightOf="@+id/play_activity_imageViewHeartDesign"
+        app:layout_constraintLeft_toLeftOf="@+id/play_activity_imageViewHeartDesign">
+
+        <TextView
+            android:id="@+id/play_activity_textViewUserHeartCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="+1"
+            android:textColor="@color/mainUserHeartTextColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:id="@+id/play_activity_imageViewHeart"
+            android:src="@drawable/heart"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+<!--cardCornerRadius= kenarları ovallestirme
+cardElevation=gölge ekleme
+-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:id="@+id/play_activity_cardViewQuestion"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="#EF4300"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/play_activity_imageViewHeartDesign"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:contentPadding="35dp">
+
+        <!--contentPadding:carddan olmasını ıstedgım uzaklık
+        textAlignment :yazıyı ortala-->
+        <TextView
+            android:layout_width="match_parent"
+            android:text="asdadadadasdasdadsadsad"
+            android:textStyle="bold"
+            android:textColor="@color/playQuestionTextColor"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:id="@+id/play_activity_textViewQuestion"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:id="@+id/play_activity_imageViewStatisticTable"
+        android:layout_height="60dp"
+        android:padding="2dp"
+        android:onClick="btnIstatistikTablosu"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/img_round_bg2"
+        android:src="@drawable/statistics"
+        app:layout_constraintTop_toBottomOf="@+id/play_activity_cardViewQuestion"
+        app:layout_constraintRight_toRightOf="parent"/>
+<!--        app:layout_constraintTop_toBottomOf  yazılan ıd nın degerini referans alıp ayarla aralıgı-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="_ _ _ _ _ _"
+        android:textSize="17sp"
+        android:id="@+id/play_activity_textViewQuest"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/playQuestionTextColor"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/play_activity_imageViewStatisticTable"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <!--hint:gecici deger yazılır-->
+    <EditText
+        android:layout_width="300dp"
+        android:textSize="17sp"
+        android:hint="Tahmin Değerini Giriniz"
+        android:textAlignment="center"
+        android:textColor="@color/playQuestionTextColor"
+        android:textColorHint="@color/playQuestionTextColor"
+        android:id="@+id/play_activity_editTextGuess"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/play_activity_textViewQuest"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <!--harf al ve tahmın et butonunu yatayda hızalar-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/play_activity_editTextGuess"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <Button
+            android:layout_width="150dp"
+            android:onClick="btnHarfAl"
+            android:background="@drawable/btn_letter_bg"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:onClick="btnTahminEt"
+            android:background="@drawable/btn_guess_bg"
+            android:layout_marginLeft="25dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/play_activity_adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-7849144732107445/7021746955"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </com.google.android.gms.ads.AdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

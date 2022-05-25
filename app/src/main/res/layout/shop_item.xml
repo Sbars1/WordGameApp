@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="7dp"
+    android:background="@drawable/linear_round_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="3 Adet Can"
+        android:textSize="17sp"
+        android:id="@+id/custom_dialog_shop_item_textViewItemTitle"
+        android:layout_gravity="center"
+        android:textColor="@color/customTextColor"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="5dp"
+        android:id="@+id/custom_dialog_shop_item_imageViewItemImg"
+        android:layout_height="120dp"/>
+
+    <Button
+        android:layout_width="110dp"
+        android:text="0.99 TL"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/customTextColor"
+        android:textSize="17sp"
+        android:id="@+id/custom_dialog_shop_item_btnItemPrice"
+        android:textStyle="bold"
+        android:background="@drawable/btn_round_bg_2"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

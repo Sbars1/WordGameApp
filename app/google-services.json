@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "800792880816",
+    "project_id": "wordgame-a77b3",
+    "storage_bucket": "wordgame-a77b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800792880816:android:10c60d19fca91dcf74bd75",
+        "android_client_info": {
+          "package_name": "com.example.wordgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800792880816-j0dsgc94au9abq6uteb2ss27oqgap3lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKevMmBQD3JsoyKJJcVYjHqb6ImdtdXks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800792880816-j0dsgc94au9abq6uteb2ss27oqgap3lu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
